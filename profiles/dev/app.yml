@@ -1,0 +1,26 @@
+# app base config item
+app:
+  app_env: dev
+  app_name: app
+  mode: debug # debug|test|release
+  addr: ':9990'
+  read_timeout: 10s
+  write_timeout: 30s
+  export_config_path: bak_conf/ # 导出配置文件路径
+  export_config_force: true # true 导出目录不存在则创建(需要权限)
+  export_config: true # 是否导出配置文件
+  # 如果导出目录已存在同名配置文件，是否覆盖或保留多份不同名字文件, 以时间为前缀
+  export_config_unique: true
+  ticker_interval: 15m # for ticker test
+
+log4go:
+  level: INFO
+  #full_path: true
+  file_writer:
+    level: DEBUG
+    log_path: ./log/app-%Y%M%D.log
+    enable: true
+  console_writer:
+    level: DEBUG
+    enable: true
+    color: true

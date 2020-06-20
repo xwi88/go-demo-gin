@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  app:
+    build: .
+    environment:
+      TZ: "Asia/Shanghai"
+    container_name: go-demo-gin
+    image: v8fg/go-demo-gin:latest
+    ports:
+      - "9990:9990"
+    restart: 'always' # 'no'|'on-failure'|'always'|'unless-stopped'
+    volumes:
+      - $PWD/dist/conf:/data1/services/app/conf
+      - $PWD/dist/log:/data1/services/app/log

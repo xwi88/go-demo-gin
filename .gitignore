@@ -13,3 +13,27 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# ignore the vscode temp files
+*.inp
+*.oac
+
+.vscode/
+.glide/
+.idea/
+!.gitkeep
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+.DS_Store
+*.nohup.out
+vendor/
+
+dist/
+docker/data
+
+build/
+*.log
+bak_conf
+# binary
+app
