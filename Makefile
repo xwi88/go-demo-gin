@@ -104,6 +104,10 @@ docker-mod:
 	bash ${BASEDIR}/docker/docker-build.sh mod
 	@echo "Done docker with go mod built for dev"
 
+deploy:
+	bash ${BASEDIR}/quick_startup.sh
+	@echo "Done docker with go mod deploy only for dev test"
+
 run:
 	${BASEDIR}/build/bin/app start
 

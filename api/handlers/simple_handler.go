@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/kdpujie/log4go"
+	"github.com/xwi88/kit4go/datetime"
 
 	"github.com/xwi88/go-demo-gin/constants"
 	"github.com/xwi88/go-demo-gin/model"
@@ -46,7 +47,7 @@ func SimpleHandler(c *gin.Context) {
 		return
 	}
 	log4go.Debug("[SimpleHandler] origin request data:%+v", requestData)
-
+	rsp.Data = datetime.NowTimestampStr(datetime.LayoutDateTimeISO8601ZoneP8Mid)
 	errCode, err := writeResponseJSON(c, bl, w, rsp)
 	if err != nil {
 		log4go.Error("response err_code:%v, err:%v", errCode, err.Error())

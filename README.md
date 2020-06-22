@@ -46,3 +46,4 @@ export GOPRIVATE=*.example.com
 - **创建镜像** `make docker-build-dev`|`make docker-build-uat`|`make docker-build-prod`
 - **镜像推送** 推送生成的镜像到 *corp* 镜像仓库
 - **镜像使用** 选择要发布的镜像版本，发布即可，默认启动
+- **开发测试部署** `make deploy` 借助 `docker`, `docker-compose`
